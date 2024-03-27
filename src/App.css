@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,
+html {
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+  min-height: 100%;
+  background-image: url("./assets/cold.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transition: all 0.5s ease-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-box {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar {
+  margin-left: 25%;
+  width: 50%;
+  padding: 15px;
+  border-width: 0.35vh;
+  border-color: rgb(255, 255, 255);
+  outline: none;
+  border-radius: 20px;
+  color: rgb(0, 0, 0);
+  font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 600px) {
+  .search-bar {
+    width: 90%;
+    margin-left: 20px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.search-bar:focus {
+  box-shadow: none;
+}
+
+.search-bar::placeholder {
+  color: rgb(70, 68, 68);
+}
+
+.app.rain {
+  background-image: url("./assets/rainy.jpg");
+  background-position: -455px center;
+}
+
+.app.haze {
+  background-image: url("/src/assets/Haze.jpg");
+}
+
+.app.cloud {
+  background-image: url("/src/assets/Cloud.jpg");
+}
+
+.app.clear {
+  background-image: url("/src/assets/clear.jpg");
+}
+
+.app.mist {
+  background-image: url("/src/assets/mist.jpg");
 }
